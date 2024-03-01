@@ -1,12 +1,15 @@
 from django.shortcuts import render
-from .models import Recipe, Ingredient
-from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
+from django.views.generic.list import ListView
+
+from .models import Recipe
+
 
 class RecipeListView(ListView):
     model = Recipe
-    template_name = 'recipe_list.html'
+    template_name = "recipe_list.html"
+
 
 class RecipeDetailView(DetailView):
     model = Recipe
-    template_name = 'recipe_detail.html'
+    template_name = "recipe_detail.html"
